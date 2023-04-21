@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 class Notification extends Component { 
     render() {
         return (
-            <h2>
+            <h3>
                 {this.props.message}
-            </h2>
+            </h3>
         )
     }
 }
