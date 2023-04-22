@@ -33,26 +33,28 @@ class App extends Component {
   return (
     <main>
       <Section
-      title={"Please leave feedback"}
-      />
+        title={"Please leave feedback"}>
       <FeedbackOptions
         options={Object.keys(this.state) }
         onLeaveFeedback={ this.handleIncrement }
       />
-      <Section
-      title={"Statistics"}
-      />
+      </Section>
+
       {this.countTotalFeedback() === 0 ?
         <Notification
         message="There is no feedback"
         /> :
-      <Statistics
+      <Section
+      title={"Statistics"} >   
+        <Statistics
         good={this.state.good}
         neutral={this.state.neutral}
         bad={this.state.bad}
         total={this.countTotalFeedback()}
         positivePercentage={this.countPositiveFeedbackPercentage()}
-      />}
+      />
+        </Section> 
+      }
   </main>)
 } ;
 };

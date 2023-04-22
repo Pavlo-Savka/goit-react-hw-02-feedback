@@ -1,4 +1,4 @@
-//npmimport PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types'; 
 import React, { Component } from 'react';
 
 class Notification extends Component { 
@@ -11,3 +11,7 @@ class Notification extends Component {
     }
 }
 export default Notification;
+
+Notification.propTypes = {
+    message: PropTypes.string.isRequired
+};
